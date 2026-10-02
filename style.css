@@ -1,0 +1,293 @@
+/* Color Palette (Hot Wheels Automotive Theme: Flame Red, Deep Asphalt, Gold) */
+:root {
+    --primary-red: #D32F2F;        /* Hot Wheels Flame Red */
+    --accent-yellow: #FFC107;      /* Gold/Amber Accent */
+    --bg-dark: #1A1A1A;           /* Deep Asphalt Dark Background */
+    --bg-light: #F8F9FA;          /* Clean Light Gray Background */
+    --card-white: #FFFFFF;
+    --text-dark: #212121;
+    --text-muted: #666666;
+    --border-color: #E0E0E0;
+    --font-heading: 'Montserrat', sans-serif;
+    --font-body: 'Open Sans', sans-serif;
+}
+
+/* Base Resets */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+    font-family: var(--font-body);
+    line-height: 1.6;
+    scroll-behavior: smooth;
+}
+
+h1, h2, h3 {
+    font-family: var(--font-heading);
+    letter-spacing: -0.02em;
+}
+
+/* Header & Sticky Navigation */
+header {
+    background-color: var(--bg-dark);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+.nav-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 1rem 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo h1 {
+    font-size: 1.8rem;
+    font-weight: 900;
+    color: var(--primary-red);
+    line-height: 1;
+}
+
+.logo-sub {
+    font-size: 0.65rem;
+    font-weight: 600;
+    letter-spacing: 0.25em;
+    color: var(--accent-yellow);
+    display: block;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 1.8rem;
+}
+
+nav a {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-family: var(--font-heading);
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    transition: color 0.2s ease;
+}
+
+nav a:hover {
+    color: var(--accent-yellow);
+}
+
+/* Hero Section */
+.hero-section {
+    background: linear-gradient(135deg, rgba(26,26,26,0.92), rgba(211,47,47,0.85)), #1A1A1A;
+    color: #FFFFFF;
+    padding: 6rem 1.5rem;
+    text-align: center;
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.tagline {
+    font-size: 0.8rem;
+    letter-spacing: 0.25em;
+    font-weight: 800;
+    color: var(--accent-yellow);
+}
+
+.hero-section h2 {
+    font-size: clamp(2.2rem, 5vw, 3.8rem);
+    font-weight: 900;
+    margin: 0.8rem 0 1.2rem 0;
+    line-height: 1.15;
+}
+
+.hero-section p {
+    font-size: 1.1rem;
+    opacity: 0.9;
+    margin-bottom: 2rem;
+}
+
+.cta-btn {
+    display: inline-block;
+    background-color: var(--primary-red);
+    color: #FFFFFF;
+    padding: 0.9rem 2.2rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-family: var(--font-heading);
+    font-weight: 800;
+    font-size: 0.9rem;
+    letter-spacing: 0.1em;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.cta-btn:hover {
+    background-color: #B71C1C;
+    transform: translateY(-2px);
+}
+
+/* Section Wrapper */
+.section-container {
+    padding: 4.5rem 1.5rem;
+}
+
+.section-container.dark-bg {
+    background-color: var(--bg-dark);
+    color: #FFFFFF;
+}
+
+.content-wrapper {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.section-tag {
+    font-size: 0.75rem;
+    letter-spacing: 0.2em;
+    font-weight: 800;
+    color: var(--primary-red);
+    display: block;
+    margin-bottom: 0.3rem;
+}
+
+.dark-bg .section-tag {
+    color: var(--accent-yellow);
+}
+
+.section-container h2 {
+    font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+    margin-bottom: 1.5rem;
+}
+
+.dark-bg h2 {
+    color: #FFFFFF;
+}
+
+/* Cards Grid */
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.card {
+    background-color: var(--card-white);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    color: var(--text-dark);
+    display: flex;
+    flex-direction: column;
+}
+
+.card-img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.card-body {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.standalone-card {
+    justify-content: center;
+    background-color: #2A2A2A;
+    color: #FFFFFF;
+    border-radius: 8px;
+    height: 100%;
+}
+
+.badge {
+    align-self: flex-start;
+    background-color: var(--primary-red);
+    color: #FFFFFF;
+    font-size: 0.65rem;
+    font-weight: 800;
+    padding: 0.2rem 0.6rem;
+    border-radius: 3px;
+    margin-bottom: 0.8rem;
+    letter-spacing: 0.05em;
+}
+
+.badge.highlight {
+    background-color: var(--accent-yellow);
+    color: var(--text-dark);
+}
+
+.card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.6rem;
+}
+
+.card p {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    margin-bottom: 1rem;
+    flex-grow: 1;
+}
+
+.standalone-card p {
+    color: #CCCCCC;
+}
+
+.price {
+    font-family: var(--font-heading);
+    font-weight: 800;
+    color: var(--primary-red);
+    font-size: 1rem;
+}
+
+.standalone-card .price {
+    color: var(--accent-yellow);
+}
+
+/* Contact Grid */
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 1.5rem;
+}
+
+.info-box {
+    background-color: #FFFFFF;
+    padding: 2rem;
+    border-radius: 8px;
+    border-left: 5px solid var(--primary-red);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.info-box h3 {
+    color: var(--primary-red);
+    margin-bottom: 1rem;
+}
+
+/* Footer */
+footer {
+    background-color: #111111;
+    color: #888888;
+    text-align: center;
+    padding: 2.5rem 1.5rem;
+    border-top: 1px solid #222222;
+    font-size: 0.85rem;
+}
+
+footer strong {
+    color: #FFFFFF;
+}
